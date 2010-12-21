@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+<title>WebSocketChat</title>
+    <link type="text/css" href="common.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript">google.load("jquery", '1.4.2');</script>
+	<script type="text/javascript" src="js/json2.js"></script>
+    <script type="text/javascript" src="js/websocket.js"></script>
+</head>
+<body>
+<div id="content">
+<fieldset><legend>&nbsp;Informetion&nbsp;</legend>
+<div><p>state: <span id="connectstate"></span></p>
+<p>online: <span id="online">0</span></p></div>
+</fieldset>
+<br/>
+<fieldset><legend>&nbsp;Please input message for other user&nbsp;</legend>
+<table>
+<tr>
+<td>
+name:
+</td>
+<td>
+<input id="name" type="text" />
+</td>
+</tr>
+<tr>
+<td>
+message:
+</td>
+<td>
+<input id="message" type="text" />
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<input id="send" type="button" value="Send message to other user" />
+</td>
+</tr>
+</table>
+</fieldset>
+<div id="messages">
+</div>
+</div>
+</body>
+</html>

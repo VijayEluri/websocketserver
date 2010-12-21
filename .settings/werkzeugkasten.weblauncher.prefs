@@ -1,0 +1,6 @@
+#Wed Dec 01 21:50:46 JST 2010
+baseDir=/websocketserver/target/websocketserver
+checkServer=true
+contextName=/websocketserver
+eclipse.preferences.version=1
+webType=Jetty7.2

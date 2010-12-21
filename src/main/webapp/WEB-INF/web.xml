@@ -1,0 +1,44 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>WebSockert Server</display-name>
+ 
+    <servlet>
+    <servlet-name>WebSocketChatServlet</servlet-name>
+    <servlet-class>k5m.wsserver.chat.WebSocketChatServlet</servlet-class>
+    </servlet>
+   
+    <servlet>
+    <servlet-name>WebSocketSlideRemoteServlet</servlet-name>
+    <servlet-class>k5m.wsserver.slide.WebSocketSlideRemoteServlet</servlet-class>
+    </servlet>
+     
+	<servlet>
+    <servlet-name>WebSocketSlideClientServlet</servlet-name>
+    <servlet-class>k5m.wsserver.slide.WebSocketSlideClientServlet</servlet-class>
+    </servlet>
+     
+    <servlet-mapping>
+    <servlet-name>WebSocketChatServlet</servlet-name>
+    <url-pattern>/chat/ws/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+    <servlet-name>WebSocketSlideRemoteServlet</servlet-name>
+    <url-pattern>/slide/remote/ws/*</url-pattern>
+    </servlet-mapping>
+		 
+    <servlet-mapping>
+    <servlet-name>WebSocketSlideClientServlet</servlet-name>
+    <url-pattern>/slide/client/ws/*</url-pattern>
+    </servlet-mapping>
+    
+    <resource-ref>
+      <description>postgreSQL Datasource example</description>
+      <res-ref-name>jdbc/myds</res-ref-name>
+      <res-type>javax.sql.DataSource</res-type>
+      <res-auth>Container</res-auth>
+    </resource-ref>
+</web-app>
